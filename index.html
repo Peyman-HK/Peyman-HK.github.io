@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Peyman Kassani</title>
   <style>
     /* Basic Reset & Layout */
@@ -15,254 +15,261 @@
       font-family: Arial, sans-serif;
       background-color: #fff; 
       color: #000;
+      line-height: 1.5;
     }
     a {
       text-decoration: none;
       color: #000;
     }
-    header, nav, section, footer {
-      width: 100%;
-      margin: 0 auto;
+    h1, h2, h3, h4 {
+      font-weight: normal;
+      margin-bottom: 0.5rem;
     }
-    /* Top Navigation Bar */
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2rem 0 1rem 0;
+    }
+
+    /* Header with Name */
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 5%;
-      border-bottom: 1px solid #ddd;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    .logo h1 {
-      font-size: 1.2rem;
-      font-weight: bold;
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    header h3 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin-bottom: 1rem;
+    }
+    .download-cv {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #000;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    .download-cv:hover {
+      opacity: 0.8;
+    }
+
+    /* Navigation (Anchors) */
+    nav {
+      text-align: center;
+      margin-bottom: 1rem;
     }
     nav ul {
       list-style: none;
-      display: flex;
-      gap: 1.5rem;
+      display: inline-block;
     }
     nav li {
-      font-size: 0.95rem;
+      display: inline;
+      margin: 0 1rem;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    /* Hero / Profile Section */
-    .hero {
+
+    /* About Section (Photo + Summary) */
+    .about-section {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 2rem 5%;
+      justify-content: center;
+      padding: 1rem;
     }
-    .hero-img {
-      flex: 1;
-      min-width: 250px;
-      max-width: 300px;
-      margin-right: 2rem;
-      margin-bottom: 1rem;
+    .photo-container {
+      flex: 0 0 auto;
+      margin: 1rem;
+      max-width: 200px;
       text-align: center;
     }
-    .hero-img img {
+    .photo-container img {
       width: 100%;
-      max-width: 250px;
       border-radius: 50%;
     }
-    .hero-text {
-      flex: 2;
-      min-width: 280px;
+    .summary {
+      flex: 1 1 300px;
+      margin: 1rem;
+      max-width: 600px;
     }
-    .hero-text h2 {
-      font-size: 1.8rem;
+    .summary p {
       margin-bottom: 1rem;
     }
-    .hero-text p {
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-    .btn-cv {
-      display: inline-block;
-      padding: 0.8rem 1.2rem;
-      background-color: #000;
-      color: #fff;
-      border-radius: 5px;
-      font-size: 0.95rem;
-    }
-    .btn-cv:hover {
-      opacity: 0.8;
-    }
-    /* Interests / Education block */
-    .info-block {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 2rem 5%;
-      gap: 2rem;
-    }
-    .info-section {
-      flex: 1;
-      min-width: 280px;
-    }
-    .info-section h3 {
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
-    }
-    .info-section ul {
-      list-style: square inside;
-      line-height: 1.6;
-    }
-    /* Main Sections (Bio, Papers, etc.) */
+
+    /* Section Headings */
     section {
-      padding: 2rem 5%;
-      border-top: 1px solid #ddd;
+      padding: 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
     section h2 {
-      font-size: 1.4rem;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
-    section p, section li {
-      line-height: 1.6;
+    section ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+      margin-top: 0.5rem;
     }
+
+    /* Contact Table or List */
+    .contact-info {
+      margin-top: 1rem;
+    }
+    .contact-info p {
+      margin-bottom: 0.5rem;
+    }
+
     /* Footer */
     footer {
       text-align: center;
-      padding: 1rem 5%;
-      border-top: 1px solid #ddd;
-      margin-top: 2rem;
-    }
-    footer p {
+      margin: 2rem 0;
       font-size: 0.9rem;
+      color: #666;
     }
-    /* Responsive Tweaks */
+
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
-      .hero {
+      .about-section {
         flex-direction: column;
       }
-      .hero-img {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      nav ul {
-        gap: 1rem;
+      nav li {
+        display: block;
+        margin: 0.5rem 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
+  <!-- Header with Name & Title -->
   <header>
-    <div class="logo">
-      <h1>Peyman Kassani</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#bio">Bio</a></li>
-        <li><a href="#papers">Papers</a></li>
-        <li><a href="#talks">Talks</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-      </ul>
-    </nav>
+    <h1>Peyman Kassani</h1>
+    <h3>Senior Researcher in AI/ML · 10+ Years in Computer Vision & Generative AI</h3>
+    <!-- Link to PDF Resume -->
+    <a class="download-cv" href="Resume__Peyman_2025_March.pdf" target="_blank" download>Download CV</a>
   </header>
 
-  <!-- Hero / Profile Section -->
-  <section class="hero">
-    <div class="hero-img">
-      <!-- Replace YOUR_PHOTO.jpg with your actual photo filename -->
-      <img src="Peyman photo.jpg" alt="Photo of Peyman Kassani">
-    </div>
-    <div class="hero-text">
-      <h2>Senior Researcher in Computer Vision & Generative AI</h2>
-      <p>
-        PhD-trained expert with over 10 years of experience in developing scalable AI solutions for 
-        healthcare and biomedical applications. Specializing in medical imaging, multi-modal data integration,
-        and embedded systems.
-      </p>
-      <!-- Replace YOUR_RESUME.pdf with your actual resume PDF name -->
-      <a class="btn-cv" href="Resume__Peyman_2025_March.pdf" target="_blank" download>Download CV</a>
-    </div>
-  </section>
-
-  <!-- Interests / Education Block -->
-  <div class="info-block">
-    <div class="info-section">
-      <h3>Interests</h3>
-      <ul>
-        <li>Computer Vision & Generative AI</li>
-        <li>Multi-Modal Learning & XAI</li>
-        <li>LLMs & Self-Supervised Learning</li>
-        <li>Medical Imaging & Embedded Systems</li>
-      </ul>
-    </div>
-    <div class="info-section">
-      <h3>Education</h3>
-      <ul>
-        <li>Ph.D. in Electrical Engineering (Computer Vision), Yonsei University</li>
-        <li>M.Sc. in Computer Science, Kharazmi University</li>
-        <li>B.Sc. in Applied Mathematics, Basic Sciences University</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bio Section -->
-  <section id="bio">
-    <h2>Bio</h2>
-    <p>
-      I have led multiple AI-driven projects, from self-supervised pediatric disease detection pipelines 
-      to advanced diffusion-based generative models. My core expertise lies in CNNs, VAEs, Denoising Diffusion, 
-      Neural ODEs, and LLM/CV integration.
-    </p>
-  </section>
-
-  <!-- Papers Section -->
-  <section id="papers">
-    <h2>Papers</h2>
+  <!-- Navigation -->
+  <nav>
     <ul>
-      <li>Nature Pediatric Research 2023: Explainable DNNs for juvenile dermatomyositis prediction</li>
-      <li>Nature Machine Intelligence 2022: Identification of causal genetic variants in Alzheimer’s research</li>
-      <li>IEEE TMI 2020: Causality-based feature fusion for brain neuro-developmental analysis</li>
-      <!-- Add more relevant publications here -->
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Selected Publications</a></li>
+      <li><a href="#advisories">Advisories</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-section">
+      <div class="photo-container">
+        <!-- Replace with your actual photo filename -->
+        <img src="Peyman photo.jpg" alt="Photo of Peyman Kassani">
+      </div>
+      <div class="summary">
+        <p>
+          PhD-trained expert specializing in deploying scalable deep learning systems for 
+          healthcare and biomedical applications. Proven success in leading AI projects for medical imaging,
+          multi-modal data (genomic + imaging), and embedded systems.
+        </p>
+        <p>
+          Core expertise includes CNNs, VAEs, Denoising Diffusion models, Neural ODEs, Self-Supervised Learning,
+          Model Quantization, Explainable AI (XAI), Multi-Modal Learning, Video/Image Processing, Augmented Reality,
+          and LLM/CV integration. Published innovator with 15+ papers in top journals (Nature, IEEE, MICCAI)
+          and experience securing NIH grants.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- Talks Section -->
-  <section id="talks">
-    <h2>Talks</h2>
-    <p>Coming soon...</p>
-  </section>
+  <hr/>
 
   <!-- News Section -->
   <section id="news">
     <h2>News</h2>
-    <p>Check back for updates on grants, publications, and upcoming presentations.</p>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
     <ul>
-      <li><strong>Senior Researcher (AI/ML) at Children’s Hospital of Orange County (CHOC), 2022–Present</strong></li>
-      <li><strong>Research Bioinformatician II at Cedars-Sinai Medical Center, 2022–2023</strong></li>
-      <li><strong>Postdoctoral Researcher at Stanford University, 2020–2022</strong></li>
-      <li><strong>Postdoctoral Researcher at Tulane University, 2018–2020</strong></li>
-      <!-- Add more details if needed -->
+      <li>R21 grant for AI-driven craniofacial cleft lip under review (NIH).</li>
+      <li>Joined Children’s Hospital of Orange County (CHOC) in 2022, leading AI/ML initiatives.</li>
+      <li>MICCAI 2025 paper submitted on “Dual Attention Mechanism in Pixel Grouping.”</li>
+      <!-- Add or remove news items as needed -->
     </ul>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Highlights of recent work, including pediatric disease detection, multi-modal data integration, and model optimization for embedded devices.</p>
+  <hr/>
+
+  <!-- Selected Publications -->
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <ul>
+      <li><strong>Nature Pediatric Research 2023:</strong> Explainable deep neural networks for juvenile dermatomyositis prediction.</li>
+      <li><strong>Nature Machine Intelligence 2022:</strong> Deep neural networks with controlled variable selection for causal genetic variant identification.</li>
+      <li><strong>IEEE TMI 2020:</strong> Causality-based feature fusion for brain neuro-developmental analysis.</li>
+      <li><strong>MICCAI 2025 (Submitted):</strong> Dual Attention Mechanism in Pixel Grouping for Patent Ductus Arteriosus Prediction.</li>
+      <li><strong>IEEE TPAMI 2025 (Under Review):</strong> Self-Adaptive Bi-Directional Scaling Factors for High Dimensional SVMs.</li>
+      <!-- Add more key papers from your resume as desired -->
+    </ul>
   </section>
+
+  <hr/>
+
+  <!-- Advisories Section (Mentorship, Leadership, Grants, etc.) -->
+  <section id="advisories">
+    <h2>Advisories</h2>
+    <ul>
+      <li>Mentorship: Trained 5 junior researchers in CV/ML best practices at CHOC and UCI.</li>
+      <li>NIH Grant Writing: Led multiple proposals, including AI-driven craniofacial cleft lip detection (R21 under review).</li>
+      <!-- Remove or expand if needed; we have omitted Rekovar as requested -->
+    </ul>
+  </section>
+
+  <hr/>
 
   <!-- Teaching Section -->
   <section id="teaching">
     <h2>Teaching</h2>
-    <p>Coming soon...</p>
+    <ul>
+      <li>Postdoctoral Researcher, Stanford University (2020–2022) — collaborated on advanced AI curricula.</li>
+      <li>Postdoctoral Researcher, Tulane University (2018–2020) — taught and mentored graduate students on multi-modal data integration.</li>
+      <li>Relevant Courses: Explainable Deep Learning, Support Vector Machines, Granger Causality, Digital Image Processing, Neural Networks.</li>
+    </ul>
   </section>
 
-  <!-- Footer -->
+  <hr/>
+
+  <!-- Software Section -->
+  <section id="software">
+    <h2>Software</h2>
+    <ul>
+      <li>Cleft lip automated annotation tool (Windows/Web) for physicians at CHOC and UCI.</li>
+      <li>Explainable VAE frameworks for spatial transcriptomics at Cedars-Sinai.</li>
+      <li>PyTorch-based WSI analysis pipeline (reduced processing time from hours to minutes).</li>
+      <!-- Add or remove items based on your actual software contributions -->
+    </ul>
+  </section>
+
+  <hr/>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p><strong>Mobile:</strong> +1 (504) 326-0172</p>
+      <p><strong>Email:</strong> <a href="mailto:phkassani@gmail.com">phkassani@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/peyman-h-kassani-51015b47" target="_blank">Peyman Kassani</a></p>
+      <p><strong>Google Scholar:</strong> <a href="https://scholar.google.co.uk/citations?user=x2I7eVUAAAAJ&hl=en" target="_blank">View Publications</a></p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Peyman Kassani</p>
   </footer>
