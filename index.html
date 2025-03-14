@@ -2,134 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peyman Kassani | Senior Researcher in AI & Computer Vision</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Peyman Kassani</title>
   <style>
-    /* Basic styling for clarity */
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
-    .container { width: 80%; margin: auto; background: #fff; padding: 20px; }
-    header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
-    nav ul { list-style: none; padding: 0; }
-    nav ul li { display: inline; margin-right: 15px; }
-    nav a { color: #fff; text-decoration: none; }
-    section { margin: 20px 0; }
-    h1, h2, h3 { color: #333; }
-    footer { background: #333; color: #fff; text-align: center; padding: 10px 0; }
-    a { color: #0066cc; }
-    img.profile-photo {
-      max-width: 150px; 
-      border-radius: 50%; 
-      margin: 10px 0;
-      display: block;
+    /* Basic Reset & Layout */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff; 
+      color: #000;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    header, nav, section, footer {
+      width: 100%;
+      margin: 0 auto;
+    }
+    /* Top Navigation Bar */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 5%;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav li {
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    /* Hero / Profile Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 2rem 5%;
+    }
+    .hero-img {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      margin-right: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 50%;
+    }
+    .hero-text {
+      flex: 2;
+      min-width: 280px;
+    }
+    .hero-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .btn-cv {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      background-color: #000;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+    .btn-cv:hover {
+      opacity: 0.8;
+    }
+    /* Interests / Education block */
+    .info-block {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem 5%;
+      gap: 2rem;
+    }
+    .info-section {
+      flex: 1;
+      min-width: 280px;
+    }
+    .info-section h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .info-section ul {
+      list-style: square inside;
+      line-height: 1.6;
+    }
+    /* Main Sections (Bio, Papers, etc.) */
+    section {
+      padding: 2rem 5%;
+      border-top: 1px solid #ddd;
+    }
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    section p, section li {
+      line-height: 1.6;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 5%;
+      border-top: 1px solid #ddd;
+      margin-top: 2rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+    /* Responsive Tweaks */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Top Navigation -->
   <header>
-    <h1>Peyman Kassani</h1>
-    <p>Senior Researcher in Computer Vision & Generative AI</p>
+    <div class="logo">
+      <h1>Peyman Kassani</h1>
+    </div>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#papers">Papers</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#news">News</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#teaching">Teaching</a></li>
       </ul>
     </nav>
   </header>
-  
-  <div class="container">
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <!-- Insert Your Photo Here -->
-      <img 
-        class="profile-photo" 
-        src="Peyman photo.jpg" 
-        alt="Photo of Peyman Kassani"
-      />
+
+  <!-- Hero / Profile Section -->
+  <section class="hero">
+    <div class="hero-img">
+      <!-- Replace YOUR_PHOTO.jpg with your actual photo filename -->
+      <img src="Peyman photo.jpg" alt="Photo of Peyman Kassani">
+    </div>
+    <div class="hero-text">
+      <h2>Senior Researcher in Computer Vision & Generative AI</h2>
       <p>
-        I am a PhD-trained expert with over 10 years of experience in Computer Vision and Generative AI.
-        I specialize in deploying scalable deep learning systems for healthcare and biomedical applications.
-        My work spans medical imaging, multi-modal data integration, and embedded systems.
+        PhD-trained expert with over 10 years of experience in developing scalable AI solutions for 
+        healthcare and biomedical applications. Specializing in medical imaging, multi-modal data integration,
+        and embedded systems.
       </p>
-    </section>
-    
-    <!-- Professional Experience Section -->
-    <section id="experience">
-      <h2>Professional Experience</h2>
-      
-      <h3>Senior Researcher (AI/ML)</h3>
-      <p><strong>Children’s Hospital of Orange County (CHOC), Irvine, CA | 2022–Present</strong></p>
+      <!-- Replace YOUR_RESUME.pdf with your actual resume PDF name -->
+      <a class="btn-cv" href="Resume__Peyman_2025_March.pdf" target="_blank" download>Download CV</a>
+    </div>
+  </section>
+
+  <!-- Interests / Education Block -->
+  <div class="info-block">
+    <div class="info-section">
+      <h3>Interests</h3>
       <ul>
-        <li>Led development of self-supervised CV pipelines for pediatric disease detection, reducing manual annotation costs.</li>
-        <li>Deployed Docker/Kubernetes-based segmentation models for MRI analysis, improving diagnostic accuracy in neonatal care.</li>
-        <li>Spearheaded NIH grant proposals and developed a cleft lip automated annotation tool for physicians.</li>
-      </ul>
-      
-      <h3>Research Bioinformatician II</h3>
-      <p><strong>Cedars-Sinai Medical Center, Los Angeles, CA | 2022–2023</strong></p>
-      <ul>
-        <li>Designed explainable VAE frameworks for spatial transcriptomics and architected a PyTorch-based WSI analysis pipeline.</li>
-      </ul>
-      
-      <h3>Postdoctoral Researcher (AI Innovation)</h3>
-      <p><strong>Stanford University School of Medicine | 2020–2022</strong></p>
-      <ul>
-        <li>Enabled causal variant discovery in Alzheimer’s research.</li>
-      </ul>
-      
-      <h3>Postdoctoral Researcher (AI Innovation)</h3>
-      <p><strong>Tulane University School of Medicine | 2018–2020</strong></p>
-      <ul>
-        <li>Developed multi-modal models integrating brain imaging with genomic data.</li>
-      </ul>
-    </section>
-    
-    <!-- Education Section -->
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Ph.D. in Electrical Engineering (Computer Vision)</strong>, Yonsei University, Seoul, South Korea (2013–2018)</li>
-        <li><strong>M.Sc. in Computer Science</strong>, Kharazmi University, Tehran, Iran (2010–2013)</li>
-        <li><strong>B.Sc. in Applied Mathematics</strong>, Basic Sciences University, Guilan, Iran (2004–2008)</li>
-      </ul>
-    </section>
-    
-    <!-- Key Skills Section -->
-    <section id="skills">
-      <h2>Key Skills</h2>
-      <ul>
-        <li>Computer Vision & Generative AI (VAEs, GANs)</li>
-        <li>LLMs, Self-Supervised Learning, Multi-Modal Systems, Explainable AI</li>
-        <li>Python, PyTorch, TensorFlow, OpenCV</li>
-        <li>Docker, Kubernetes, AWS SageMaker</li>
+        <li>Computer Vision & Generative AI</li>
+        <li>Multi-Modal Learning & XAI</li>
+        <li>LLMs & Self-Supervised Learning</li>
         <li>Medical Imaging & Embedded Systems</li>
       </ul>
-    </section>
-    
-    <!-- Awards Section -->
-    <section id="awards">
-      <h2>Awards & Recognition</h2>
+    </div>
+    <div class="info-section">
+      <h3>Education</h3>
       <ul>
-        <li>Best Student Paper Award, ICCAS 2015</li>
-        <li>Outstanding Foreign Student Scholarship, Yonsei University</li>
-        <li>Recognized as one of the top students in Electrical Engineering and Computer Science</li>
+        <li>Ph.D. in Electrical Engineering (Computer Vision), Yonsei University</li>
+        <li>M.Sc. in Computer Science, Kharazmi University</li>
+        <li>B.Sc. in Applied Mathematics, Basic Sciences University</li>
       </ul>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Mobile: +1 (504) 326-0172</p>
-      <p>Email: <a href="mailto:phkassani@gmail.com">phkassani@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/peyman-h-kassani-51015b47">Peyman Kassani</a></p>
-      <p>Google Scholar: <a href="https://scholar.google.co.uk/citations?user=x2I7eVUAAAAJ&hl=en">View Publications</a></p>
-    </section>
+    </div>
   </div>
-  
+
+  <!-- Bio Section -->
+  <section id="bio">
+    <h2>Bio</h2>
+    <p>
+      I have led multiple AI-driven projects, from self-supervised pediatric disease detection pipelines 
+      to advanced diffusion-based generative models. My core expertise lies in CNNs, VAEs, Denoising Diffusion, 
+      Neural ODEs, and LLM/CV integration.
+    </p>
+  </section>
+
+  <!-- Papers Section -->
+  <section id="papers">
+    <h2>Papers</h2>
+    <ul>
+      <li>Nature Pediatric Research 2023: Explainable DNNs for juvenile dermatomyositis prediction</li>
+      <li>Nature Machine Intelligence 2022: Identification of causal genetic variants in Alzheimer’s research</li>
+      <li>IEEE TMI 2020: Causality-based feature fusion for brain neuro-developmental analysis</li>
+      <!-- Add more relevant publications here -->
+    </ul>
+  </section>
+
+  <!-- Talks Section -->
+  <section id="talks">
+    <h2>Talks</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- News Section -->
+  <section id="news">
+    <h2>News</h2>
+    <p>Check back for updates on grants, publications, and upcoming presentations.</p>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Senior Researcher (AI/ML) at Children’s Hospital of Orange County (CHOC), 2022–Present</strong></li>
+      <li><strong>Research Bioinformatician II at Cedars-Sinai Medical Center, 2022–2023</strong></li>
+      <li><strong>Postdoctoral Researcher at Stanford University, 2020–2022</strong></li>
+      <li><strong>Postdoctoral Researcher at Tulane University, 2018–2020</strong></li>
+      <!-- Add more details if needed -->
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Highlights of recent work, including pediatric disease detection, multi-modal data integration, and model optimization for embedded devices.</p>
+  </section>
+
+  <!-- Teaching Section -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Peyman Kassani</p>
   </footer>
